@@ -23,3 +23,6 @@ secondLang.replaceWith (newli)
 //edit
 const first=document.querySelector('li:first-child')
 first.outerHTML='<li>TypeScript</li>'
+//remove
+const lastName=document.querySelector('li:last-child')
+langName.remove()
