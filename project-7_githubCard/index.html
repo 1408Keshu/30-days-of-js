@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Github Card</title>
+    <style>
+        body{
+            margin: 30px;
+        }
+        .card{
+            margin:40px;
+            /*
+            background-color: rgb(77, 77, 77);
+            */
+            width: 60vw;
+            overflow: hidden;
+
+            height: 40vh;
+            display: flex;
+            gap: 30px;
+            
+        }
+        img{
+            border: 2px dotted white;
+        }
+    </style>
+</head>
+<body style="background-color: rgb(30, 29, 29);color:white;">
+    <h1>Welcome to my Github Profile Card</h1>
+    <form class="form">
+        <input type="text" id="User" class="user_name" placeholder="Enter your UserName">
+        <button id="subt" type="submit" >submit</button>
+    </form>
+    <div class="card">
+        <div id="image">
+            
+        </div>
+        <div id="discription">
+            <h3 id="Name"></h3>
+            <div id="Location"></div>
+            <div id="Followers"></div>
+            <div id="Following"></div>
+            <div id="Repo"></div>
+            <div id="Bio"></div>
+        </div>
+    </div>
+    <script src="index.js"></script> 
+</body>
+</html>
