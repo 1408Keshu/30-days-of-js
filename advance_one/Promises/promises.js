@@ -69,6 +69,7 @@ const promiseFive=new Promise(function(resolve,reject){
 // async wait is like then,catch
 //which will wait for promise to resolve or reject 
 //but Async Await can not directly handle ERRORS
+//so thats why We use try catch in async function
 async function consumePromiseFive() {
     try{
         const response=await promiseFive
@@ -77,14 +78,16 @@ async function consumePromiseFive() {
         console.log(error);
     }
 }
+
 consumePromiseFive()
+
 async function getAllUsers(){
     try{
         const response=await fetch('https://jsonplaceholder.typicode.com/users')
         // so converting data into json also takes time so we need to put that function in await
         console.log(response);
-        const data= response.json() //converting string data to json format
-        // const data=await response.json();
+        // const data= response.json() //converting string data to json format
+        const data=await response.json();
         console.log(data);
     }
 catch(error){
@@ -92,3 +95,11 @@ catch(error){
 }
 }
 getAllUsers();
+fetch('https://api.github.com/users/hiteshchoudhary')
+.then((response)=>{
+    return response.json()
+})
+.then((then)=>{
+    console.log(data);
+})
+.catch((error) => console.log(error))
